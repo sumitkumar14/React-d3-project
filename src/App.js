@@ -16,7 +16,6 @@ function App() {
               <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
               <li><Link to={'/about'} className="nav-link">About</Link></li>
               </Sider>
-              <h2>Welcome to React</h2>
           </Layout>
             <Content>
           <Switch>
