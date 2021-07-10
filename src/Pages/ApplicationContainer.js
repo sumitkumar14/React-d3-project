@@ -38,7 +38,7 @@ class ApplicationContainer extends React.Component {
       padding: 24,
       minHeight: 280,};
     return (
-      <Layout>
+      <Layout style={{height:'100vh'}}>
         <Router>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div style={logoStyle} className="logo" />
