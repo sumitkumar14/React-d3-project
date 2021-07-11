@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as d3 from "d3";
 class BarChart extends Component {
   componentDidMount() {
-    const data = [2, 4, 2, 6, 8, 10, 12, 14, 16, 18];
+    const data = [2, 4, 6, 8, 10, 12, 14, 16, 18];
     this.drawBarChart(data);
   }
   drawBarChart(data) {
@@ -10,7 +10,7 @@ class BarChart extends Component {
     const canvasWidth = 600;
     const scale = 20;
     const svgCanvas = d3
-      .select(this.refs.canvas)
+      .select("#bar")
       .append("svg")
       .attr("width", canvasWidth)
       .attr("height", canvasHeight)
@@ -35,7 +35,7 @@ class BarChart extends Component {
       .attr("y", (datapoint) => canvasHeight - datapoint * scale);
   }
   render() {
-    return <div ref="canvas"></div>;
+    return <div id="bar"></div>;
   }
 }
 export default BarChart;
