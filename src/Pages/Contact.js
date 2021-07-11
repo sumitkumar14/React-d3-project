@@ -1,11 +1,12 @@
 
 import React, { Component } from 'react';
+import BarChart from '.././components/BarChart';
 
 class Contact extends Component {
   render() {
     return (
         <div>
-          <h2>Contact</h2>
+          <BarChart></BarChart>
         </div>
     );
   }
