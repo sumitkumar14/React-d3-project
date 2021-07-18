@@ -3,8 +3,11 @@ import React from 'react';
 import Home from './Home.js';
 // import TopHeaderView from './Applicationlevel/TopHeaderView.js';
 import About from './About.js';
-import Contact from './Contact.js';
 import CircleChart from '.././components/CircleChart.js';
+import PieChart from '.././components/PieChart.js';
+import BubbleChart from '.././components/BubbleChart.js';
+import DonutChart from '.././components/DonutChart.js';
+import BarChart from '.././components/BarChart.js';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -50,10 +53,10 @@ class ApplicationContainer extends React.Component {
             <Link to={'/'} className="nav-link"> Home </Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-            <Link to={'/contact'} className="nav-link">BarChart</Link>
+            <Link to={'/BarChart'} className="nav-link">BarChart</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<UploadOutlined />}>
-            <Link to={'/about'} className="nav-link">PieChart</Link>
+            <Link to={'/about'} className="nav-link">About</Link>
             </Menu.Item>
             <Menu.Item key="4" icon={<UploadOutlined />}>
             <Link to={'/CircleChart'} className="nav-link">CircleChart</Link>
@@ -63,6 +66,9 @@ class ApplicationContainer extends React.Component {
             </Menu.Item>
             <Menu.Item key="6" icon={<UploadOutlined />}>
             <Link to={'/DonutChart'} className="nav-link">DonutChart</Link>
+            </Menu.Item>
+            <Menu.Item key="7" icon={<UploadOutlined />}>
+            <Link to={'/PieChart'} className="nav-link">PieChart</Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -79,9 +85,12 @@ class ApplicationContainer extends React.Component {
           >
               <Switch>
               <Route exact path='/' component={Home} />
-              <Route path='/contact' component={Contact} />
+              <Route path='/BarChart' component={BarChart} />
               <Route path='/about' component={About} />
               <Route path='/CircleChart' component={CircleChart} />
+              <Route path='/PieChart' component={PieChart} />
+              <Route path='/DonutChart' component={DonutChart} />
+              <Route path='/BubbleChart' component={BubbleChart} />
               </Switch>
           </Content>
         </Layout>

@@ -52,7 +52,7 @@ class CircleChart extends Component {
     });
   }
   render() {
-    return <div id="circleChar">hello</div>;
+    return <div id="circleChar"></div>;
   }
 }
 export default CircleChart;
