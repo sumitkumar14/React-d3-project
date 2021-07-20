@@ -1,13 +1,13 @@
 import { Layout, Menu } from 'antd';
 import React from 'react';
-import Home from './Home.js';
-import TopHeaderView from './ApplicationLevel/TopHeaderView.js';
-import About from './About.js';
-import CircleChart from '.././components/CircleChart.js';
-import PieChart from '.././components/PieChart.js';
-import BubbleChart from '.././components/BubbleChart.js';
-import DonutChart from '.././components/DonutChart.js';
-import BarChart from '.././components/BarChart.js';
+import Home from './Home';
+import TopHeaderView from './ApplicationLevel/TopHeaderView';
+import About from './About';
+import CircleChart from '.././components/CircleChart';
+import PieChart from '.././components/PieChart';
+import BubbleChart from '.././components/BubbleChart';
+import DonutChart from '.././components/DonutChart';
+import BarChart from '.././components/BarChart';
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -54,13 +54,13 @@ class ApplicationContainer extends React.Component {
             <Link to={'/BarChart'} className="nav-link">BarChart</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<UploadOutlined />}>
-            <Link to={'/about'} className="nav-link">About</Link>
+            <Link to={'/About'} className="nav-link">About</Link>
             </Menu.Item>
             <Menu.Item key="4" icon={<UploadOutlined />}>
             <Link to={'/CircleChart'} className="nav-link">CircleChart</Link>
             </Menu.Item>
             <Menu.Item key="5" icon={<UploadOutlined />}>
-            <Link to={'/BubleChart'} className="nav-link">BubleChart</Link>
+            <Link to={'/BubbleChart'} className="nav-link">BubleChart</Link>
             </Menu.Item>
             <Menu.Item key="6" icon={<UploadOutlined />}>
             <Link to={'/DonutChart'} className="nav-link">DonutChart</Link>
@@ -81,7 +81,7 @@ class ApplicationContainer extends React.Component {
               <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/BarChart' component={BarChart} />
-              <Route path='/about' component={About} />
+              <Route path='/About' component={About} />
               <Route path='/CircleChart' component={CircleChart} />
               <Route path='/PieChart' component={PieChart} />
               <Route path='/DonutChart' component={DonutChart} />
