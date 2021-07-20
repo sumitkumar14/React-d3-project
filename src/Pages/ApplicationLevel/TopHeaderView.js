@@ -18,7 +18,7 @@ class TopHEaderView extends Component {
   };
   render() {
     return (
-        <div>
+        <div style={{paddingLeft:'1rem'}}>
          {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
               className: 'trigger',
               onClick: this.toggle,
