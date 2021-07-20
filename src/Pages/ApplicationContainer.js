@@ -1,7 +1,7 @@
 import { Layout, Menu } from 'antd';
 import React from 'react';
 import Home from './Home.js';
-// import TopHeaderView from './Applicationlevel/TopHeaderView.js';
+import TopHeaderView from './ApplicationLevel/TopHeaderView.js';
 import About from './About.js';
 import CircleChart from '.././components/CircleChart.js';
 import PieChart from '.././components/PieChart.js';
@@ -9,8 +9,6 @@ import BubbleChart from '.././components/BubbleChart.js';
 import DonutChart from '.././components/DonutChart.js';
 import BarChart from '.././components/BarChart.js';
 import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
   UserOutlined,
   VideoCameraOutlined,
   UploadOutlined,
@@ -24,11 +22,11 @@ class ApplicationContainer extends React.Component {
     collapsed: false,
   };
 
-  toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
-  };
+  clickEvent1=(collapsed1)=>{
+      this.setState({
+        collapsed: collapsed1,
+      });
+    };
 
   render() {
     // const RouterList=['Home','BarChart','PieChart','CircleChart','BubleChart','DonutChart'];
@@ -74,10 +72,7 @@ class ApplicationContainer extends React.Component {
         </Sider>
         <Layout className="site-layout">
           <Header style={headerStyle} className="site-layout-background">
-            {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: 'trigger',
-              onClick: this.toggle,
-            })}
+          <TopHeaderView handleClick={this.clickEvent1} />
           </Header>
           <Content
             className="site-layout-background"

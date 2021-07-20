@@ -6,6 +6,16 @@ import {
 
 
 class TopHEaderView extends Component {
+  state = {
+    collapsed: true,
+  };
+
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+    this.props.handleClick(this.state.collapsed);
+  };
   render() {
     return (
         <div>
