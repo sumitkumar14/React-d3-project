@@ -50,12 +50,15 @@ class ApplicationContainer extends React.Component {
             <Menu.Item key="1" icon={<UserOutlined />}>
             <Link to={'/'} className="nav-link"> Home </Link>
             </Menu.Item>
-            <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-            <Link to={'/BarChart'} className="nav-link">BarChart</Link>
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UploadOutlined />}>
+
+            <Menu.Item key="2" icon={<UploadOutlined />}>
             <Link to={'/About'} className="nav-link">About</Link>
             </Menu.Item>
+
+            <Menu.Item key="3" icon={<VideoCameraOutlined />}>
+            <Link to={'/BarChart'} className="nav-link">BarChart</Link>
+            </Menu.Item>
+            
             <Menu.Item key="4" icon={<UploadOutlined />}>
             <Link to={'/CircleChart'} className="nav-link">CircleChart</Link>
             </Menu.Item>
