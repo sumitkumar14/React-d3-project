@@ -35,7 +35,7 @@ class BarChart extends Component {
       .attr("y", (datapoint) => canvasHeight - datapoint * scale);
   }
   render() {
-    return <div id="bar"></div>;
+    return <div style={{justifyContent:'center', display:'flex'}}><div id="bar"></div></div>;
   }
 }
 export default BarChart;

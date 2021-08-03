@@ -52,7 +52,7 @@ class CircleChart extends Component {
     });
   }
   render() {
-    return <div id="circleChar"></div>;
+    return <div style={{justifyContent:'center', display:'flex'}}><div id="circleChar"></div></div>;
   }
 }
 export default CircleChart;
