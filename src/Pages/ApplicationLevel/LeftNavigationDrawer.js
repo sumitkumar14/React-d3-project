@@ -26,8 +26,7 @@ function LeftNavigationDrawer(props) {
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           <Menu.Item key="1" icon={<UserOutlined />}>
             <Link to={"/"} className="nav-link">
-              {" "}
-              Home{" "}
+              Home
             </Link>
           </Menu.Item>
 
