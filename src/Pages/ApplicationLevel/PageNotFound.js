@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class PageNotFound extends Component {
   render() {
     return (
-        <div  style={{fontWeight:'bold', display:'flex',textAlign:'justify', margin:'auto', width:'50%', fontSize:'4rem'}}>
-        Page Not Found
+        <div  style={{fontWeight:'bold', height:'100%', display:'flex',alignItems:'center', justifyContent:'center', margin:'auto', fontSize:'4rem'}}>
+         <span> Page Not Found</span>
         </div>
     );
   }
