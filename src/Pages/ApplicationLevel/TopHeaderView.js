@@ -1,9 +1,5 @@
-import React, { Component } from 'react';
-import {
-    MenuUnfoldOutlined,
-    MenuFoldOutlined
-  } from '@ant-design/icons';
-
+import React, { Component } from "react";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 class TopHEaderView extends Component {
   state = {
@@ -18,12 +14,15 @@ class TopHEaderView extends Component {
   };
   render() {
     return (
-        <div style={{paddingLeft:'1rem'}}>
-         {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: 'trigger',
-              onClick: this.toggle,
-            })}
-        </div>
+      <div style={{ paddingLeft: "1rem" }}>
+        {React.createElement(
+          this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+          {
+            className: "trigger",
+            onClick: this.toggle,
+          }
+        )}
+      </div>
     );
   }
 }
