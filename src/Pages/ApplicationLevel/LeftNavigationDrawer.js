@@ -8,13 +8,23 @@ import {
 } from "@ant-design/icons";
 const { Sider } = Layout;
 
+const items = [
+  { key: '1', label: 'Home', path: '/', icon:<UserOutlined/> },
+  { key: '2', label: 'About', path: '/About', icon:<VideoCameraOutlined/>  },
+  { key: '3', label: 'BarChart', path: '/BarChart', icon:<UploadOutlined/> },
+  { key: '4', label: 'CircleChart', path: '/CircleChart', icon:<UploadOutlined/>},
+  { key: '5', label: 'BubbleChart', path: '/BubbleChart', icon:<UploadOutlined/>},
+  { key: '6', label: 'DonutChart', path: '/DonutChart', icon:<UploadOutlined/>},
+  { key: '7', label: 'PieChart', path: '/PieChart', icon:<UploadOutlined/>}
+]
+
 function LeftNavigationDrawer(props) {
   const logoStyle = {
     height: "32px",
     margin: "16px",
     background: "rgba(255, 255, 255, 0.3)",
   };
-  const [selected, setselected] = useState("");
+  const [selected, setselected] = useState();
   const location = useLocation();
   useEffect(() => {
     let x="";
@@ -44,44 +54,12 @@ function LeftNavigationDrawer(props) {
       >
         <div style={logoStyle} className="logo" />
         <Menu selectedKeys={[selected]} theme="dark" mode="inline">
-          <Menu.Item key="1" icon={<UserOutlined />}>
-            <Link to={"/"} className="nav-link">
-              Home
-            </Link>
-          </Menu.Item>
-
-          <Menu.Item key="2" icon={<UploadOutlined />}>
-            <Link to={"/About"} className="nav-link">
-              About
-            </Link>
-          </Menu.Item>
-
-          <Menu.Item key="3" icon={<VideoCameraOutlined />}>
-            <Link to={"/BarChart"} className="nav-link">
-              BarChart
-            </Link>
-          </Menu.Item>
-
-          <Menu.Item key="4" icon={<UploadOutlined />}>
-            <Link to={"/CircleChart"} className="nav-link">
-              CircleChart
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="5" icon={<UploadOutlined />}>
-            <Link to={"/BubbleChart"} className="nav-link">
-              BubleChart
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="6" icon={<UploadOutlined />}>
-            <Link to={"/DonutChart"} className="nav-link">
-              DonutChart
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="7" icon={<UploadOutlined />}>
-            <Link to={"/PieChart"} className="nav-link">
-              PieChart
-            </Link>
-          </Menu.Item>
+        {items.map((item) => (
+          <Menu.Item key={item.key} icon={item.icon}> 
+          <Link to={item.path} className="nav-link">
+         {item.label}
+        </Link></Menu.Item>
+        ))}
         </Menu>
       </Sider>
     </div>
