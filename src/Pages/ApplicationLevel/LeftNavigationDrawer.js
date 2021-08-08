@@ -1,6 +1,6 @@
 import { Menu, Layout } from "antd";
-import { React } from "react";
-import { Link } from "react-router-dom";
+import { React, useState, useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -14,6 +14,26 @@ function LeftNavigationDrawer(props) {
     margin: "16px",
     background: "rgba(255, 255, 255, 0.3)",
   };
+  const [selected, setselected] = useState("");
+  const location = useLocation();
+  useEffect(() => {
+    let x="";
+    if(location.pathname.endsWith('/'))
+    x="1";
+    else if(location.pathname.endsWith("/About"))
+    x="2";
+    else if(location.pathname.endsWith("/BarChart"))
+    x="3";
+    else if(location.pathname.endsWith("/CircleChart"))
+    x="4";
+    else if(location.pathname.endsWith("/BubbleChart"))
+    x="5";
+    else if(location.pathname.endsWith("/DonutChart"))
+    x="6";
+    else if(location.pathname.endsWith("/PieChart"))
+    x="7";
+    setselected(x)
+  }, [location])
   return (
     <div>
       <Sider
@@ -23,7 +43,7 @@ function LeftNavigationDrawer(props) {
         collapsed={props.collapsed}
       >
         <div style={logoStyle} className="logo" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+        <Menu selectedKeys={[selected]} theme="dark" mode="inline">
           <Menu.Item key="1" icon={<UserOutlined />}>
             <Link to={"/"} className="nav-link">
               Home
