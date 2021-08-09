@@ -1,14 +1,16 @@
 import { React } from "react";
 
 function LoginPage(props) {
+  const container1={
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    height:'100vh'
+}
   return (
-    <div>
+    <div style={container1}>
       <form action="action_page.php" method="post">
-        <div class="imgcontainer">
-          <img src="img_avatar2.png" alt="Avatar" class="avatar" />
-        </div>
-
-        <div class="container">
+        <div style={{display:'flex',flexDirection:'column'}}>
           <label for="uname">
             <b>Username</b>
           </label>
@@ -17,7 +19,7 @@ function LoginPage(props) {
             placeholder="Enter Username"
             name="uname"
             required
-          />
+          ></input>
 
           <label for="psw">
             <b>Password</b>
@@ -27,12 +29,10 @@ function LoginPage(props) {
             placeholder="Enter Password"
             name="psw"
             required
-          />
+          ></input>
 
           <button type="submit">Login</button>
           <label>
-            <input type="checkbox" checked="checked" name="remember" /> Remember
-            me
           </label>
         </div>
 

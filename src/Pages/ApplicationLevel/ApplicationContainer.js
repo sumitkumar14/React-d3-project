@@ -4,14 +4,16 @@ import TopHeaderView from "./TopHeaderView";
 import { BrowserRouter as Router } from "react-router-dom";
 import LeftNavigationDrawer from "./LeftNavigationDrawer";
 import ContentView from "./ContentView";
-import PageNotFound from "./PageNotFound";
+// import PageNotFound from "./PageNotFound";
+// import LoginPage from "./LoginPage";
+import SignupPage from "./SignupPage";
 
 const { Header } = Layout;
 
 class ApplicationContainer extends React.Component {
   state = {
     collapsed: false,
-    notFound:false,
+    notFound:true,
   };
 
   clickEvent1 = (collapsed1) => {
@@ -42,7 +44,9 @@ class ApplicationContainer extends React.Component {
         <Layout style={{ height: "100vh" }}>
         <Router>
           <Layout className="site-layout">
-            <PageNotFound></PageNotFound>
+            {/* <PageNotFound></PageNotFound> */}
+            {/* <LoginPage></LoginPage> */}
+            <SignupPage></SignupPage>
           </Layout>
         </Router>
       </Layout>)
