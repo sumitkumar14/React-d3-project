@@ -14,7 +14,13 @@ class PageNotFound extends Component {
           fontSize: "4rem",
         }}
       >
-        <span> Page Not Found</span>
+        <div  style={{
+          display: "inline-block",
+          textAlign:"center"
+        }}>
+        <div>404</div>
+        <div>Page Not Found</div>
+        </div>
       </div>
     );
   }

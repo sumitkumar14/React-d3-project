@@ -4,12 +4,14 @@ import TopHeaderView from "./TopHeaderView";
 import { BrowserRouter as Router } from "react-router-dom";
 import LeftNavigationDrawer from "./LeftNavigationDrawer";
 import ContentView from "./ContentView";
+import PageNotFound from "./PageNotFound";
 
 const { Header } = Layout;
 
 class ApplicationContainer extends React.Component {
   state = {
     collapsed: false,
+    notFound:false,
   };
 
   clickEvent1 = (collapsed1) => {
@@ -20,6 +22,7 @@ class ApplicationContainer extends React.Component {
 
   render() {
     const headerStyle = { background: "#fff", padding: 0 };
+    if(!this.state.notFound){
     return (
       <Layout style={{ height: "100vh" }}>
         <Router>
@@ -33,8 +36,17 @@ class ApplicationContainer extends React.Component {
             <ContentView></ContentView>
           </Layout>
         </Router>
-      </Layout>
-    );
+      </Layout>)}
+      else{
+        return(
+        <Layout style={{ height: "100vh" }}>
+        <Router>
+          <Layout className="site-layout">
+            <PageNotFound></PageNotFound>
+          </Layout>
+        </Router>
+      </Layout>)
+      }
   }
 }
 export default ApplicationContainer;
