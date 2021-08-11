@@ -7,6 +7,7 @@ import ContentView from "./ContentView";
 // import PageNotFound from "./PageNotFound";
 // import LoginPage from "./LoginPage";
 import SignupPage from "./SignupPage";
+// import Terms from "./Terms";
 
 const { Header } = Layout;
 
@@ -42,13 +43,15 @@ class ApplicationContainer extends React.Component {
       else{
         return(
         <Layout style={{ height: "100vh" }}>
-        <Router>
+       
           <Layout className="site-layout">
-            {/* <PageNotFound></PageNotFound> */}
-            {/* <LoginPage></LoginPage> */}
+          <Router>
+            {/* <Terms></Terms> */}
+            {/* <PageNotFound></PageNotFound>
+            <LoginPage></LoginPage> */}
             <SignupPage></SignupPage>
+            </Router>
           </Layout>
-        </Router>
       </Layout>)
       }
   }

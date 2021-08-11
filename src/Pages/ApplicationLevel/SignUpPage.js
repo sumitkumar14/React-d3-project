@@ -1,4 +1,5 @@
 import { React } from "react";
+import { Link} from "react-router-dom";
 
 function SignupPage(props) {
   const container1={
@@ -51,9 +52,9 @@ function SignupPage(props) {
 
       <p>
         By creating an account you agree to our{" "}
-        <a href="#/" style={{ color: "dodgerblue" }}>
+        <Link to='/Terms' className="nav-link" style={{ color: "dodgerblue" }}>
           Terms & Privacy
-        </a>
+        </Link>
         .
       </p>
 

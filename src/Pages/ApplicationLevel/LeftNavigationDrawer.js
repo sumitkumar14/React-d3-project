@@ -15,7 +15,8 @@ const items = [
   { key: '4', label: 'CircleChart', path: '/CircleChart', icon:<UploadOutlined/>},
   { key: '5', label: 'BubbleChart', path: '/BubbleChart', icon:<UploadOutlined/>},
   { key: '6', label: 'DonutChart', path: '/DonutChart', icon:<UploadOutlined/>},
-  { key: '7', label: 'PieChart', path: '/PieChart', icon:<UploadOutlined/>}
+  { key: '7', label: 'PieChart', path: '/PieChart', icon:<UploadOutlined/>},
+  { key: '8', label: 'Terms', path: '/Terms', icon:<UploadOutlined/>}
 ]
 
 function LeftNavigationDrawer(props) {
