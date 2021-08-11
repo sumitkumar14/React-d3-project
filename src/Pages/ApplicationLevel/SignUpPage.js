@@ -9,35 +9,38 @@ function SignupPage(props) {
 }
   return (
     <div style={container1}>
-    <form style={{ border: "1px solid #ccc" }}>
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
+    <form style={{ border: "1px solid #ccc",backgroundColor:'#ffffff', padding:'4px' }}>
+    <label style={{paddingBottom:'4px',fontSize:'16px'}}><b>Sign Up</b></label>
+      <p style={{paddingBottom:'4px'}}>Please fill in this form to create an account.</p>
       <hr />
       <div style={{display:'flex',flexDirection:'column'}}>
-      <label for="email">
+      <label style={{paddingBottom:'4px',fontSize:'16px'}} for="email">
         <b>Email</b>
       </label>
       <input
+        style={{marginBottom:'16px'}}
         type="text"
         placeholder="Enter Email"
         name="email"
         required
       ></input>
 
-      <label for="psw">
+      <label style={{paddingBottom:'4px',fontSize:'16px'}} for="psw">
         <b>Password</b>
       </label>
       <input
+      style={{marginBottom:'16px',fontSize:'16px'}}
         type="password"
         placeholder="Enter Password"
         name="psw"
         required
       ></input>
 
-      <label for="psw-repeat">
+      <label style={{paddingBottom:'4px', fontSize:'16px'}} for="psw-repeat">
         <b>Repeat Password</b>
       </label>
       <input
+      style={{marginBottom:'16px'}}
         type="password"
         placeholder="Repeat Password"
         name="psw-repeat"
@@ -52,11 +55,11 @@ function SignupPage(props) {
         .
       </p>
 
-      <div class="clearfix">
+      <div style={{display:'flex',padding:'0px,0px,8px,0px', justifyContent:'flex-end', alignItems:'center'}}>
         <button type="button" class="cancelbtn">
           Cancel
         </button>
-        <button type="submit" class="signupbtn">
+        <button style={{marginLeft:'8px'}} type="submit" class="signupbtn">
           Sign Up
         </button>
         </div>
