@@ -9,6 +9,7 @@ import BarChart from "../../components/BarChart";
 import Home from "../Home";
 import { Switch, Route } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
+import Terms from "./Terms";
 const { Content } = Layout;
 
 function ContentView(props) {
@@ -31,6 +32,7 @@ function ContentView(props) {
           <Route path="/PieChart" component={PieChart} />
           <Route path="/DonutChart" component={DonutChart} />
           <Route path="/BubbleChart" component={BubbleChart} />
+          <Route path="/Terms" component={Terms} />
           <Route component={PageNotFound} />
         </Switch>
       </Content>

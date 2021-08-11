@@ -1,13 +1,13 @@
 import { Layout } from "antd";
 import React from "react";
 import TopHeaderView from "./TopHeaderView";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LeftNavigationDrawer from "./LeftNavigationDrawer";
 import ContentView from "./ContentView";
-// import PageNotFound from "./PageNotFound";
-// import LoginPage from "./LoginPage";
+import PageNotFound from "./PageNotFound";
+import LoginPage from "./LoginPage";
 import SignupPage from "./SignupPage";
-// import Terms from "./Terms";
+import Terms from "./Terms";
 
 const { Header } = Layout;
 
@@ -43,14 +43,13 @@ class ApplicationContainer extends React.Component {
       else{
         return(
         <Layout style={{ height: "100vh" }}>
-       
           <Layout className="site-layout">
-          <Router>
-            {/* <Terms></Terms> */}
-            {/* <PageNotFound></PageNotFound>
-            <LoginPage></LoginPage> */}
-            <SignupPage></SignupPage>
-            </Router>
+          <Switch>
+          <Route path="/SignupPage" component={SignupPage} />
+          <Route path="/Terms" component={Terms} />
+          <Route path="/PageNotFound" component={PageNotFound} />
+          <Route path="/LoginPage" component={LoginPage} />
+        </Switch>
           </Layout>
       </Layout>)
       }

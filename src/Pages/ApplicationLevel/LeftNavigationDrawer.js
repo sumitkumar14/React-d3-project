@@ -43,6 +43,8 @@ function LeftNavigationDrawer(props) {
     x="6";
     else if(location.pathname.endsWith("/PieChart"))
     x="7";
+    else if(location.pathname.endsWith("/Terms"))
+    x="8";
     setselected(x)
   }, [location])
   return (
