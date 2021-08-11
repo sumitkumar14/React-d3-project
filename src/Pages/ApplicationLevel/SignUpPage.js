@@ -5,11 +5,13 @@ function SignupPage(props) {
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
+    flexDirection:'column',
     height:'100vh'
 }
   return (
     <div style={container1}>
-    <form style={{ border: "1px solid #ccc",backgroundColor:'#ffffff', padding:'4px' }}>
+    <div style={{fontWeight:'bold', fontSize:'24px', margin:'8px'}}>D3-React-Application</div>
+    <form style={{ backgroundColor:'#ffffff', padding:'4px' }}>
     <label style={{paddingBottom:'4px',fontSize:'16px'}}><b>Sign Up</b></label>
       <p style={{paddingBottom:'4px'}}>Please fill in this form to create an account.</p>
       <hr />
